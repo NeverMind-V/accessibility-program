@@ -7,7 +7,7 @@
   });
 })();
 
-document.querySelectorAll('#nav li').forEach(function (navEl) {
+document.querySelectorAll('#nav button').forEach(function (navEl) {
   navEl.onclick = function () {
     toggleTab(this.id, this.dataset.target);
   };
@@ -20,7 +20,7 @@ document.querySelectorAll('#nav li').forEach(function (navEl) {
 });
 
 function toggleTab(selectedNav, targetId) {
-  var navEls = document.querySelectorAll('#nav li');
+  var navEls = document.querySelectorAll('#nav button');
 
   navEls.forEach(function (navEl) {
     if (navEl.id == selectedNav) {

@@ -233,3 +233,29 @@ input[type='radio']:focus {
 .main-menu.tabs li.is-active a span {
   color: #2c5f8a !important;
 }
+
+.tabslist {
+  display: flex;
+  justify-content: center;
+}
+
+.main-menu {
+  justify-content: center;
+}
+
+.main-menu .button {
+  background: #296fa8;
+  color: white;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 2px solid transparent;
+}
+
+.main-menu .button.is-active {
+  color: #296fa8;
+  background: white;
+}
+
+.main-menu .button.is-active:focus {
+  border-bottom-width: 0 !important;
+}

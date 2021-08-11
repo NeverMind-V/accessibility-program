@@ -193,8 +193,43 @@ li {
   border: 0;
 }
 
-a:focus, button:focus, input:focus {
-  border: 2px solid rgb(34, 87, 187)!important;
-  box-shadow: none!important;
-  outline: none!important;
+.button-navigation:focus {
+  height: auto;
+  width: auto;
+  padding: 5px 10px;
+  z-index: 50;
+}
+
+a:not(.button),
+button,
+a.button.is-link {
+  border: 2px solid transparent !important;
+}
+
+a:focus,
+button:focus,
+input:focus,
+a.button.is-link:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid rgb(70, 177, 96) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+input[type='checkbox']:focus,
+input[type='radio']:focus {
+  outline: 2px solid rgb(70, 177, 96) !important;
+}
+
+.help.caution {
+  color: #055f51;
+}
+
+.button-post {
+  width: 100%;
+}
+
+.main-menu.tabs li.is-active a span {
+  color: #2c5f8a !important;
 }

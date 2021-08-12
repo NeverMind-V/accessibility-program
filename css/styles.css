@@ -259,3 +259,12 @@ input[type='radio']:focus {
 .main-menu .button.is-active:focus {
   border-bottom-width: 0 !important;
 }
+
+.navbar-custom-link {
+  color: white;
+}
+
+.navbar-custom-link:hover {
+  color: white;
+  border-bottom: 2px solid white;
+}

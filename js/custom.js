@@ -19,6 +19,14 @@ document.querySelectorAll('#nav button').forEach(function (navEl) {
   });
 });
 
+window.onload = function () {
+  var interval = window.setInterval(showStatus, 60000);
+};
+
+function showStatus() {
+  document.querySelector('#status-field').innerHTML = `Status Code: ${Math.floor(Math.random() * 10)}`;
+}
+
 function toggleTab(selectedNav, targetId) {
   var navEls = document.querySelectorAll('#nav button');
 

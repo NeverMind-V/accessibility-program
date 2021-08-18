@@ -28,8 +28,8 @@
           </div>
 
           <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end" role="menu">
-              <span class="navbar-item" role="menuitem">
+            <nav class="navbar-end">
+              <span class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fa fa-home" aria-hidden="true"></i>
@@ -37,7 +37,7 @@
                   <span>Home</span>
                 </a>
               </span>
-              <span class="navbar-item" role="menuitem">
+              <span class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fab fa-superpowers" aria-hidden="true"></i>
@@ -45,7 +45,7 @@
                   <span>Examples</span>
                 </a>
               </span>
-              <span class="navbar-item" role="menuitem">
+              <span class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fa fa-book" aria-hidden="true"></i>
@@ -53,7 +53,7 @@
                   <span>Documentation</span>
                 </a>
               </span>
-              <span class="navbar-item" role="menuitem">
+              <span class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fab fa-github" aria-hidden="true"></i>
@@ -61,7 +61,7 @@
                   <span>View Source</span>
                 </a>
               </span>
-            </div>
+            </nav>
           </div>
         </div>
       </nav>
@@ -233,7 +233,7 @@
           <div class="column is-4">
             <article class="card is-shady">
               <div class="card-image has-text-centered">
-                <i class="fa fa-paw" role="img" alt="paw logo" aria-label="paw logo" aria-hidden="true"></i>
+                <i class="fa fa-paw" aria-label="paw logo" aria-hidden="true"></i>
               </div>
               <div class="card-content">
                 <div class="content">
@@ -248,7 +248,7 @@
           <div class="column is-4">
             <article class="card is-shady">
               <div class="card-image has-text-centered">
-                <i class="fab fa-empire" role="img" alt="empire logo" aria-label="empire logo" aria-hidden="true"></i>
+                <i class="fab fa-empire" aria-label="empire logo" aria-hidden="true"></i>
               </div>
               <div class="card-content">
                 <div class="content">
@@ -264,7 +264,7 @@
           <div class="column is-4">
             <article class="card is-shady">
               <div class="card-image has-text-centered">
-                <i class="fab fa-apple" role="img" alt="apple logo" aria-label="apple logo"></i>
+                <i class="fab fa-apple" aria-label="apple logo" aria-hidden="true"></i>
               </div>
               <div class="card-content">
                 <div class="content">
@@ -312,7 +312,9 @@
               <article class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <img src="./img/tab-1.jpg" alt="article1" class="modal-button" data-target="modal-image1">
+                    <a href="#" class="link-image modal-button" data-target="modal-image1">
+                      <img src="./img/tab-1.jpg" alt="article1">
+                    </a>
                   </figure>
                 </div>
                 <div class="card-content">
@@ -342,7 +344,7 @@
               </article>
             </div>
             <div class="column is-4">
-              <article class="card modal-button" data-target="modal-image2">
+              <article class="card modal-button" data-target="modal-image2" tabindex="0">
                 <div class="card-image">
                   <figure class="image is-4by3">
                     <img src="./img/tab-3.jpg" class="modal-button" data-target="modal-image2" alt="card image">
@@ -1133,11 +1135,11 @@
       </div>
 
       <div class="content has-text-centered">
-        <div class="soc">
-          <a href="#" target="_blank"><i class="fab fa-github-alt fa-2x" role="img" aria-label="github" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
-          <a href="#" target="_blank"><i class="fab fa-youtube fa-2x" role="img" aria-label="youtube" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
-          <a href="#" target="_blank"><i class="fab fa-facebook fa-2x" role="img" aria-label="facebook" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter fa-2x" role="img" aria-label="twitter" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
+        <div>
+          <a href="#" target="_blank"><i class="fab fa-github-alt fa-2x" aria-hidden="true"></i><span class="visually-hidden">Github link will open in new tab</span></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i><span class="visually-hidden">Youtube link will open in new tab</span></a>
+          <a href="#" target="_blank"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><span class="visually-hidden">Facebook link will open in new tab</span></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="visually-hidden">Twitter link will open in new tab</span></a>
         </div>
         <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT <i class="fas fa-external-link-alt ml-1 "></i></a>. <span class="visually-hidden">Link will open in new tab</span></p>
       </div>

@@ -19,6 +19,17 @@ document.querySelectorAll('#nav button').forEach(function (navEl) {
   });
 });
 
+document.querySelectorAll('.modal-button').forEach(function (element) {
+  element.onclick = function () {
+    const modalId = element.getAttribute('data-target');
+    const modalButton = document.getElementById(modalId).querySelector('[aria-label="Close"]');
+    modalButton.focus();
+    modalButton.onclick = function () {
+      element.focus();
+    };
+  };
+});
+
 window.onload = function () {
   var interval = window.setInterval(showStatus, 60000);
 };

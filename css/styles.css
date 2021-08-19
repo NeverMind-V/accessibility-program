@@ -219,7 +219,7 @@ textarea:focus {
 
 input[type='checkbox']:focus,
 input[type='radio']:focus,
-article.modal-button:focus-visible,
+div.modal-button:focus-visible,
 .link-image:focus-visible img {
   outline: 2px solid rgb(70, 177, 96) !important;
 }

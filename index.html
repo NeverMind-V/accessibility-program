@@ -312,7 +312,7 @@
               <article class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <a href="#" class="link-image modal-button" data-target="modal-image1">
+                    <a href="#" class="link-image modal-button" data-target="modal-image1" role="button" aria-labelledby="modal-image1-title">
                       <img src="./img/tab-1.jpg" alt="article1">
                     </a>
                   </figure>
@@ -321,7 +321,7 @@
                   <div class="content">
                     <div>Click on image above</div>
                     <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                    <button class="button is-link modal-button" data-target="modal-image1">Image modal</button>
+                    <button class="button is-link modal-button" data-target="modal-image1" aria-label="Open modal1">Image modal</button>
                   </div>
                 </div>
               </article>
@@ -338,26 +338,26 @@
                     <div>Tempor orci dapibus ultrices in.</div>
                     <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                       sed risus.</p>
-                    <button class="button is-link modal-button" data-target="modal-card">Modal Card</button>
+                    <button class="button is-link modal-button" data-target="modal-card" aria-label="Open modal2">Modal Card</button>
                   </div>
                 </div>
               </article>
             </div>
             <div class="column is-4">
-              <article class="card modal-button" data-target="modal-image2" tabindex="0">
+              <div class="card modal-button" data-target="modal-image3" tabindex="0" role="button" aria-label="Open modal3">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <img src="./img/tab-3.jpg" class="modal-button" data-target="modal-image2" alt="card image">
+                    <img src="./img/tab-3.jpg" alt="card image">
                   </figure>
                 </div>
                 <div class="card-content">
                   <div class="content">
                     <div>Click anywhere on card</div>
                     <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    <button class="button is-link modal-button" data-target="modal-image2">Image modal</button>
+                    <button class="button is-link modal-button" tabindex="-1" aria-hidden="true" data-target="modal-image3">Image modal</button>
                   </div>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </div>
@@ -1194,8 +1194,8 @@
     <button class="modal-close is-large" aria-label="Close"><span class="visually-hidden">Close button</span></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled" role="dialog" aria-modal="true" aria-labelledby="modal-image2-title" tabindex="0">
-    <h2 id="modal-image2-title" class="visually-hidden">Modal Image2</h2>
+  <div id="modal-image3" class="modal modal-fx-superScaled" role="dialog" aria-modal="true" aria-labelledby="modal-image3-title" tabindex="0">
+    <h2 id="modal-image3-title" class="visually-hidden">Modal Image2</h2>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3" alt="modal image">

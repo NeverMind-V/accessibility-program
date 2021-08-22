@@ -29,38 +29,47 @@
 
           <div id="navbarMenu" class="navbar-menu">
             <nav class="navbar-end">
-              <span class="navbar-item">
+              <div class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fa fa-home" aria-hidden="true"></i>
                   </span> 
                   <span>Home</span>
                 </a>
-              </span>
-              <span class="navbar-item">
-                <a href="#" class="navbar-custom-link">
-                  <span class="icon">
-                    <i class="fab fa-superpowers" aria-hidden="true"></i>
-                  </span>
+              </div>
+              <div class="navbar-item navbar-submenu-item">
+                <button class="button is-ghost navbar-submenu-button" aria-expanded="false" aria-haspopup="true">
+                  <i class="fab fa-superpowers mr-1" aria-hidden="true"></i>
                   <span>Examples</span>
-                </a>
-              </span>
-              <span class="navbar-item">
+                  <i class="fas fa-angle-down ml-3" aria-hidden="true"></i>
+                </button>
+                <div class="box navbar-submenu">
+                  <ul id="navbar-submenu-list" role="menu">
+                    <li class="navbar-submenu-list-item" role="none"><a href="#" role="menuitem" tabindex="-1">Administration</a></li>
+                    <li class="navbar-submenu-list-item" role="none"><a href="#" role="menuitem" tabindex="-1">Team Settings</a></li>
+                    <li class="navbar-submenu-list-item" role="none"><a href="#" role="menuitem" tabindex="-1">Manage Your Team</a></li>
+                    <li class="navbar-submenu-list-item" role="none"><a href="#" role="menuitem" tabindex="-1">Invitations</a></li>
+                    <hr class="m-0">
+                    <li class="navbar-submenu-list-item" role="none"><a href="#" role="menuitem" tabindex="-1">Authentication</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fa fa-book" aria-hidden="true"></i>
                   </span>
                   <span>Documentation</span>
                 </a>
-              </span>
-              <span class="navbar-item">
+              </div>
+              <div class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fab fa-github" aria-hidden="true"></i>
                   </span>
                   <span>View Source</span>
                 </a>
-              </span>
+              </div>
             </nav>
           </div>
         </div>
@@ -288,15 +297,15 @@
       </div>
       <div class="main-menu" id="nav">
         <div class="tabslist" role="tablist" aria-labelledby="topics-list">
-          <button data-target="pane-1" id="1" class="button is-active" role="tab" aria-selected="true" aria-controls="pane-1">
+          <button data-target="pane-1" id="1" class="button is-active tab-button" role="tab" aria-selected="true" aria-controls="pane-1">
             <span class="icon is-small"><i class="fa fa-image" aria-hidden="true"></i></span>
             <span>Pictures</span>
           </button>
-          <button data-target="pane-3" id="3" class="button" role="tab" aria-selected="false" aria-controls="pane-3">
+          <button data-target="pane-3" id="3" class="button tab-button" role="tab" aria-selected="false" aria-controls="pane-3" tabindex="-1">
             <span class="icon is-small"><i class="fab fa-superpowers" aria-hidden="true"></i></span>
             <span>Team</span>
           </button>
-          <button data-target="pane-4" id="4" class="button" role="tab" aria-selected="false" aria-controls="pane-4">
+          <button data-target="pane-4" id="4" class="button tab-button" role="tab" aria-selected="false" aria-controls="pane-4" tabindex="-1">
             <span class="icon is-small"><i class="fa fa-film" aria-hidden="true"></i></span>
             <span>Video</span>
           </button>
@@ -305,7 +314,7 @@
     </div>
   
     <div class="tab-content container">
-      <div class="tab-pane is-active" id="pane-1" class="level" role="tabpanel">
+      <div class="tab-pane is-active" id="pane-1" class="level" role="tabpanel" tabindex="0">
         <div class="container">
           <div class="columns features">
             <div class="column is-4">
@@ -363,7 +372,7 @@
         </div>
       </div>
   
-      <div class="tab-pane" id="pane-3" role="tabpanel">
+      <div class="tab-pane" id="pane-3" role="tabpanel" tabindex="-1">
         <div class="columns medias">
           <div class="column">
             <div class="media">
@@ -424,7 +433,7 @@
         </div>
       </div>
   
-      <div class="tab-pane" id="pane-4" role="tabpanel">
+      <div class="tab-pane" id="pane-4" role="tabpanel" tabindex="-1">
         <div class="columns is-centered">
           <div class="column is-three-quarters">
             <h2 class="title has-text-centered">Inspired video</h2>
@@ -587,7 +596,7 @@
                     <img src="./img/ev-1.jpeg" alt="card image">
                   </figure>
                 </div>
-                <footer class="card-footer">
+                <footer class="card-footer" role="contentinfo">
                   <a href="#" class="card-footer-item">Preview</a>
                   <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
@@ -612,7 +621,7 @@
                     <img src="./img/ev-2.jpeg" alt="card image">
                   </figure>
                 </div>
-                <footer class="card-footer">
+                <footer class="card-footer" role="contentinfo">
                   <a href="#" class="card-footer-item">Preview</a>
                   <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
@@ -637,7 +646,7 @@
                     <img src="./img/ev-3.jpeg" alt="card image">
                   </figure>
                 </div>
-                <footer class="card-footer">
+                <footer class="card-footer" role="contentinfo">
                   <a href="#" class="card-footer-item">Preview</a>
                   <a href="#" class="card-footer-item" target="_blank" title="Link will open in new tab">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i></a>
                 </footer>
@@ -664,7 +673,7 @@
                     <img src="./img/ev-4.jpeg" alt="card image">
                   </figure>
                 </div>
-                <footer class="card-footer">
+                <footer class="card-footer" role="contentinfo">
                   <a href="#" class="card-footer-item">Preview</a>
                   <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
@@ -689,7 +698,7 @@
                     <img src="./img/ev-5.jpeg" alt="card image">
                   </figure>
                 </div>
-                <footer class="card-footer">
+                <footer class="card-footer" role="contentinfo">
                   <a href="#" class="card-footer-item">Preview</a>
                   <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
@@ -714,7 +723,7 @@
                     <img src="./img/ev-6.jpeg" alt="card image">
                   </figure>
                 </div>
-                <footer class="card-footer">
+                <footer class="card-footer" role="contentinfo">
                   <a href="#" class="card-footer-item">Preview</a>
                   <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>

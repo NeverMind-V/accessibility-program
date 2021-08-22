@@ -20,19 +20,19 @@
             <a href="#" class="navbar-item logo-link">
               <img src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" alt="logo">
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
+            <span class="navbar-burger burger" data-target="navbarMenu" aria-owns="navbarMenu" aria-haspopup="true" aria-expanded="false">
+              <span role="presentation"></span>
+              <span role="presentation"></span>
+              <span role="presentation"></span>
             </span>
           </div>
 
           <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end">
+            <nav class="navbar-end">
               <span class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
-                    <i class="fa fa-home"></i>
+                    <i class="fa fa-home" aria-hidden="true"></i>
                   </span> 
                   <span>Home</span>
                 </a>
@@ -40,7 +40,7 @@
               <span class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
-                    <i class="fab fa-superpowers"></i>
+                    <i class="fab fa-superpowers" aria-hidden="true"></i>
                   </span>
                   <span>Examples</span>
                 </a>
@@ -48,7 +48,7 @@
               <span class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-book" aria-hidden="true"></i>
                   </span>
                   <span>Documentation</span>
                 </a>
@@ -56,12 +56,12 @@
               <span class="navbar-item">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
-                    <i class="fab fa-github"></i>
+                    <i class="fab fa-github" aria-hidden="true"></i>
                   </span>
                   <span>View Source</span>
                 </a>
               </span>
-            </div>
+            </nav>
           </div>
         </div>
       </nav>
@@ -91,10 +91,11 @@
   </header>
 
   <main id="maincontent">
-    <div class="section" role="region">
+    <section class="section">
       <h2 class="title has-text-centered" id="breadcrumbs">Breadcrumbs</h2>
       <nav aria-labelledby="breadcrumbs">
         <ul>
+          <li><a href="#live-status">Live Status</a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="#key-features">Key features</a></li>
           <li><a href="#topics-list">List of topics</a></li>
@@ -105,7 +106,12 @@
           <li><a href="#contact-us">Contact us</a></li>
         </ul>
       </nav>
-    </div>
+    </section>
+
+    <section class="section" aria-labelledby="live-status">
+      <h2 class="title has-text-centered" id="live-status">Live Status</h2>
+      <div aria-live="polite" role="status" id="status-field"></div>
+    </section>
   
     <div class="section" role="region" aria-labelledby="about-us">
       <div class="section-heading has-text-centered">
@@ -123,7 +129,7 @@
   
       <div class="content container">
         <h1 class="is-1 title">Hello World</h1>
-        <p>Lorem ipsum<sup><a href="#">[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
+        <p>Lorem ipsum<sup><a href="#"><span class="visually-hidden">Number of sources: </span>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
         <h2 class="is-2 title">Second level</h2>
         <p>Curabitur accumsan turpis pharetra <b>augue tincidunt</b> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
         <ul>
@@ -133,7 +139,7 @@
           <li>- Ut non enim metus.</li>
         </ul>
         <h3 class="is-3 title">Third level</h3>
-        <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="https://www.google.com" target="_blank" >non ante <i class="fas fa-external-link-alt"></i> <span class="visually-hidden">Link will open in new tab</span></a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
+        <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="https://www.google.com" target="_blank" >non ante <i class="fas fa-external-link-alt" aria-hidden="true"></i> <span class="visually-hidden">Link will open in new tab</span></a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
         <ol class="ol-list">
           <li>Donec blandit a lorem id convallis.</li>
           <li>Cras gravida arcu at diam gravida gravida.</li>
@@ -227,7 +233,7 @@
           <div class="column is-4">
             <article class="card is-shady">
               <div class="card-image has-text-centered">
-                <i class="fa fa-paw" role="img" alt="paw logo" aria-label="paw logo"></i>
+                <i class="fa fa-paw" aria-label="paw logo" aria-hidden="true"></i>
               </div>
               <div class="card-content">
                 <div class="content">
@@ -242,7 +248,7 @@
           <div class="column is-4">
             <article class="card is-shady">
               <div class="card-image has-text-centered">
-                <i class="fab fa-empire" role="img" alt="empire logo" aria-label="empire logo"></i>
+                <i class="fab fa-empire" aria-label="empire logo" aria-hidden="true"></i>
               </div>
               <div class="card-content">
                 <div class="content">
@@ -258,7 +264,7 @@
           <div class="column is-4">
             <article class="card is-shady">
               <div class="card-image has-text-centered">
-                <i class="fab fa-apple" role="img" alt="apple logo" aria-label="apple logo"></i>
+                <i class="fab fa-apple" aria-label="apple logo" aria-hidden="true"></i>
               </div>
               <div class="card-content">
                 <div class="content">
@@ -281,17 +287,17 @@
         </div>
       </div>
       <div class="main-menu" id="nav">
-        <div class="tabslist" role="tablist">
-          <button data-target="pane-1" id="1" class="button is-active" role="tab">
-            <span class="icon is-small"><i class="fa fa-image"></i></span>
+        <div class="tabslist" role="tablist" aria-labelledby="topics-list">
+          <button data-target="pane-1" id="1" class="button is-active" role="tab" aria-selected="true" aria-controls="pane-1">
+            <span class="icon is-small"><i class="fa fa-image" aria-hidden="true"></i></span>
             <span>Pictures</span>
           </button>
-          <button data-target="pane-3" id="3" class="button" role="tab">
-            <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+          <button data-target="pane-3" id="3" class="button" role="tab" aria-selected="false" aria-controls="pane-3">
+            <span class="icon is-small"><i class="fab fa-superpowers" aria-hidden="true"></i></span>
             <span>Team</span>
           </button>
-          <button data-target="pane-4" id="4" class="button" role="tab">
-            <span class="icon is-small"><i class="fa fa-film"></i></span>
+          <button data-target="pane-4" id="4" class="button" role="tab" aria-selected="false" aria-controls="pane-4">
+            <span class="icon is-small"><i class="fa fa-film" aria-hidden="true"></i></span>
             <span>Video</span>
           </button>
         </div>
@@ -306,14 +312,16 @@
               <article class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <img src="./img/tab-1.jpg" alt="article1" class="modal-button" data-target="modal-image1">
+                    <a href="#" class="link-image modal-button" data-target="modal-image1" role="button" aria-labelledby="modal-image1-title">
+                      <img src="./img/tab-1.jpg" alt="article1">
+                    </a>
                   </figure>
                 </div>
                 <div class="card-content">
                   <div class="content">
                     <div>Click on image above</div>
                     <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                    <button class="button is-link modal-button" data-target="modal-image1">Image modal</button>
+                    <button class="button is-link modal-button" data-target="modal-image1" aria-label="Open modal1">Image modal</button>
                   </div>
                 </div>
               </article>
@@ -330,26 +338,26 @@
                     <div>Tempor orci dapibus ultrices in.</div>
                     <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                       sed risus.</p>
-                    <button class="button is-link modal-button" data-target="modal-card">Modal Card</button>
+                    <button class="button is-link modal-button" data-target="modal-card" aria-label="Open modal2">Modal Card</button>
                   </div>
                 </div>
               </article>
             </div>
             <div class="column is-4">
-              <article class="card modal-button" data-target="modal-image2">
+              <div class="card modal-button" data-target="modal-image3" tabindex="0" role="button" aria-label="Open modal3">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <img src="./img/tab-3.jpg" class="modal-button" data-target="modal-image2" alt="card image">
+                    <img src="./img/tab-3.jpg" alt="card image">
                   </figure>
                 </div>
                 <div class="card-content">
                   <div class="content">
                     <div>Click anywhere on card</div>
                     <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                    <button class="button is-link modal-button" data-target="modal-image2">Image modal</button>
+                    <button class="button is-link modal-button" tabindex="-1" aria-hidden="true" data-target="modal-image3">Image modal</button>
                   </div>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </div>
@@ -360,12 +368,12 @@
           <div class="column">
             <div class="media">
               <div class="media-left">
-                <i class="fab fa-github-square fa-4x"></i>
+                <i class="fab fa-github-square fa-4x" aria-hidden="true"></i>
               </div>
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a href="#" target="_blank"><b>Dominic Ipsum</b><i class="fas fa-external-link-alt ml-1 "></i><span class="visually-hidden">Link will open in new tab</span></a>
+                    <a href="#" target="_blank"><b>Dominic Ipsum</b><i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                     <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
@@ -378,7 +386,7 @@
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a href="#" target="_blank"><b>Cassie Ipsum</b><i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+                    <a href="#" target="_blank"><b>Cassie Ipsum</b><i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                     <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
@@ -393,7 +401,7 @@
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a href="#" target="_blank"><b>Avery Ipsum</b><i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+                    <a href="#" target="_blank"><b>Avery Ipsum</b><i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                     <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
@@ -406,7 +414,7 @@
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a href="#" target="_blank"><b>io Ipsum</b><i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+                    <a href="#" target="_blank"><b>io Ipsum</b><i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                     <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
@@ -442,8 +450,8 @@
                 <img src="./img/web-access-summit-eventbrite.jpg" alt="New York image">
               </figure>
               <h3 class="title">New York</h3>
-              <h4 class="subtitle">Fri 27 Nov 2016</h4>
-              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+              <h4 class="subtitle"><span class="visually-hidden">Date of event: </span>Fri 27 Nov 2016</h4>
+              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
             </div>
           </article>
           <article class="tile is-parent">
@@ -452,8 +460,8 @@
                 <img src="./img/access.jpg" alt="Los Angeles image">
               </figure>
               <h3 class="title">Los Angeles</h3>
-              <h4 class="subtitle">Fri 27 Nov 2016</h4>
-              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+              <h4 class="subtitle"><span class="visually-hidden">Date of event: </span>Fri 27 Nov 2016</h4>
+              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
             </div>
           </article>
           <article class="tile is-parent">
@@ -462,8 +470,8 @@
                 <img src="./img/dotcss-2019.jpg" alt="Mexico image">
               </figure>
               <h3 class="title">Mexico</h3>
-              <h4 class="subtitle">Fri 27 Nov 2016</h4>
-              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+              <h4 class="subtitle"><span class="visually-hidden">Date of event: </span>Fri 27 Nov 2016</h4>
+              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
             </div>
           </article>
         </div>
@@ -475,8 +483,8 @@
                 <img src="./img/images.jpg" alt="Paris image">
               </figure>
               <h3 class="title">Paris</h3>
-              <h4 class="subtitle">Fri 27 Nov 2016</h4>
-              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+              <h4 class="subtitle"><span class="visually-hidden">Date of event: </span>Fri 27 Nov 2016</h4>
+              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
             </div>
           </article>
           <article class="tile is-parent">
@@ -485,8 +493,8 @@
                 <img src="./img/mid_300_33455472_313632022502906_5761920685983137792_n.png" alt="Minsk image">
               </figure>
               <h3 class="title">Minsk</h3>
-              <h4 class="subtitle">Fri 27 Nov 2016</h4>
-              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+              <h4 class="subtitle"><span class="visually-hidden">Date of event: </span>Fri 27 Nov 2016</h4>
+              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
             </div>
           </article>
           <article class="tile is-parent">
@@ -495,8 +503,8 @@
                 <img src="./img/access.jpg" alt="London image">
               </figure>
               <h3 class="title">London</h3>
-              <h4 class="subtitle">Fri 27 Nov 2016</h4>
-              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1"></i><span class="visually-hidden">Link will open in new tab</span></a>
+              <h4 class="subtitle"><span class="visually-hidden">Date of event: </span>Fri 27 Nov 2016</h4>
+              <a href="#" target="_blank">Buy Tickets <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
             </div>
           </article>
         </div>
@@ -581,7 +589,7 @@
                 </div>
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">Preview</a>
-                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1 "></i><span class="visually-hidden">Link will open in new tab</span></a>
+                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
               </article>
             </div>
@@ -606,7 +614,7 @@
                 </div>
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">Preview</a>
-                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1 "></i><span class="visually-hidden">Link will open in new tab</span></a>
+                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
               </article>
             </div>
@@ -631,7 +639,7 @@
                 </div>
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">Preview</a>
-                  <a href="#" class="card-footer-item" target="_blank" title="Link will open in new tab">Source Code <i class="fas fa-external-link-alt ml-1 "></i></a>
+                  <a href="#" class="card-footer-item" target="_blank" title="Link will open in new tab">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i></a>
                 </footer>
               </article>
             </div>
@@ -658,7 +666,7 @@
                 </div>
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">Preview</a>
-                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1 "></i><span class="visually-hidden">Link will open in new tab</span></a>
+                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
               </article>
             </div>
@@ -683,7 +691,7 @@
                 </div>
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">Preview</a>
-                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1 "></i><span class="visually-hidden">Link will open in new tab</span></a>
+                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
               </article>
             </div>
@@ -708,7 +716,7 @@
                 </div>
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">Preview</a>
-                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1 "></i><span class="visually-hidden">Link will open in new tab</span></a>
+                  <a href="#" class="card-footer-item" target="_blank">Source Code <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i><span class="visually-hidden">Link will open in new tab</span></a>
                 </footer>
               </article>
             </div>
@@ -758,7 +766,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments"></i><span class="visually-hidden">Comments: </span> 1</a>
+                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments" aria-hidden="true"></i><span class="visually-hidden">Comments: </span> 1</a>
                   </div>
                 </div>
               </div>
@@ -780,7 +788,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments"></i><span class="visually-hidden">Comments: </span> 0</a>
+                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments" aria-hidden="true"></i><span class="visually-hidden">Comments: </span> 0</a>
                   </div>
                 </div>
               </div>
@@ -802,7 +810,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments"></i><span class="visually-hidden">Comments: </span> 13</a>
+                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments" aria-hidden="true" aria-hidden="true"></i><span class="visually-hidden">Comments: </span> 13</a>
                   </div>
                 </div>
               </div>
@@ -824,7 +832,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments"></i><span class="visually-hidden">Comments: </span> 2</a>
+                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments" aria-hidden="true"></i><span class="visually-hidden">Comments: </span> 2</a>
                   </div>
                 </div>
               </div>
@@ -846,7 +854,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments"></i><span class="visually-hidden">Comments: </span> 2</a>
+                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments" aria-hidden="true"></i><span class="visually-hidden">Comments: </span> 2</a>
                   </div>
                 </div>
               </div>
@@ -868,7 +876,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments"></i><span class="visually-hidden">Comments: </span> 2</a>
+                    <a href="#" class="has-text-grey-dark"><i class="fa fa-comments" aria-hidden="true"></i><span class="visually-hidden">Comments: </span> 2</a>
                   </div>
                 </div>
               </div>
@@ -898,10 +906,10 @@
             <div class="control has-icons-left has-icons-right">
               <input class="input is-success" type="text" name="username" id="username">
               <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user" aria-hidden="true"></i>
               </span>
               <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
             </div>
             <p class="help caution">This username is available</p>
@@ -912,10 +920,10 @@
             <div class="control has-icons-left has-icons-right">
               <input class="input is-danger" type="email" placeholder="Email input" value="hello@" name="email" id="email">
               <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope" aria-hidden="true"></i>
               </span>
               <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle"></i>
+                <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
               </span>
             </div>
             <p class="help has-text-danger-dark">This email is invalid</p>
@@ -943,7 +951,7 @@
           <div class="field">
             <div class="control">
               <label class="checkbox" for="agreement">
-                <input type="checkbox" id="agreement" name="Conditions and Terms Agreement">
+                <input type="checkbox" id="agreement" name="Conditions and Terms Agreement" aria-checked="false">
                 I agree to the <a href="#" target="_blank">terms and conditions</a>
               </label>
             </div>
@@ -954,12 +962,12 @@
             <div class="control">
               <label class="radio" for="yes">
                 <span class="visually-hidden">Radio control:</span>
-                <input type="radio" name="question" id="yes">
+                <input type="radio" name="question" id="yes" aria-checked="false">
                 Yes
               </label>  
               <label class="radio" for="no">
                 <span class="visually-hidden">Radio control:</span>
-                <input type="radio" name="question" id="no">
+                <input type="radio" name="question" id="no" aria-checked="false">
                 No
               </label>
             </div>
@@ -1127,18 +1135,19 @@
       </div>
 
       <div class="content has-text-centered">
-        <div class="soc">
-          <a href="#" target="_blank"><i class="fab fa-github-alt fa-2x" role="img" aria-label="github"></i><span class="visually-hidden">Link will open in new tab</span></a>
-          <a href="#" target="_blank"><i class="fab fa-youtube fa-2x" role="img" aria-label="youtube"></i><span class="visually-hidden">Link will open in new tab</span></a>
-          <a href="#" target="_blank"><i class="fab fa-facebook fa-2x" role="img" aria-label="facebook"></i><span class="visually-hidden">Link will open in new tab</span></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter fa-2x" role="img" aria-label="twitter"></i><span class="visually-hidden">Link will open in new tab</span></a>
+        <div>
+          <a href="#" target="_blank"><i class="fab fa-github-alt fa-2x" aria-hidden="true"></i><span class="visually-hidden">Github link will open in new tab</span></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i><span class="visually-hidden">Youtube link will open in new tab</span></a>
+          <a href="#" target="_blank"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><span class="visually-hidden">Facebook link will open in new tab</span></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="visually-hidden">Twitter link will open in new tab</span></a>
         </div>
         <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT <i class="fas fa-external-link-alt ml-1 "></i></a>. <span class="visually-hidden">Link will open in new tab</span></p>
       </div>
     </div>
   </footer>
 
-  <div id="modal-card" class="modal modal-fx-3dSlit">
+  <div id="modal-card" class="modal modal-fx-3dSlit" role="dialog" aria-modal="true" aria-labelledby="modal-card-title" tabindex="0">
+    <h2 id="modal-card-title" class="visually-hidden">Modal Card</h2>
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
       <div class="card">
@@ -1164,32 +1173,34 @@
             Bean's dinnahbucket bub geez bud sumpin' fierce ayuhpawt Bangah naw, Powrtland Museum of Aht down cellah sumpin' fierce hoppa bub If you can't stand the wintah you don't deserve the summah slower than molasses going uphill in January.
             Sgn'wahl shoggor hrii uaaah R'lyeh uh'e k'yarnak Hastur hupadgh li'hee, hai f'nilgh'ri nilgh'ri n'ghftor ngftaghu vulgtlagln h'hrii throd Nyarlathotep lloig, naflsll'ha nnnsll'ha athg y-ebunma goka chtenff ehyeog cehye. Zhro y'hah
             nogoth phlegeth stell'bsna orr'e ph'Hastur gnaiih throd, uln ya lw'nafh mg nar'luh li'hee wgah'n, sgn'wahl mg nakadishtu chlirgh hupadgh tharanak h'gnaiih.
-            <a>@testio</a>.
-            <a>#css</a>
-            <a>#responsive</a>
+            <a href="#"><span class="visually-hidden">Hash tag: </span>@testio</a>.
+            <a href="#"><span class="visually-hidden">Hash tag: </span>#css</a>
+            <a href="#"><span class="visually-hidden">Hash tag: </span>#responsive</a>
             <br>
             <time datetime="2018-02-02">12:45 AM - 20 June 2018</time>
           </div>
         </div>
       </div>
     </div>
-    <button class="modal-close is-large" aria-label="Close"></button>
+    <button class="modal-close is-large" aria-label="Close"><span class="visually-hidden">Close button</span></button>
   </div>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <div id="modal-image1" class="modal modal-fx-3dSlit" role="dialog" aria-modal="true" aria-labelledby="modal-image1-title" tabindex="0">
+    <h2 id="modal-image1-title" class="visually-hidden">Modal Image1</h2>
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1" alt="modal image">
     </div>
-    <button class="modal-close is-large" aria-label="Close"></button>
+    <button class="modal-close is-large" aria-label="Close"><span class="visually-hidden">Close button</span></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <div id="modal-image3" class="modal modal-fx-superScaled" role="dialog" aria-modal="true" aria-labelledby="modal-image3-title" tabindex="0">
+    <h2 id="modal-image3-title" class="visually-hidden">Modal Image2</h2>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3" alt="modal image">
     </div>
-    <button class="modal-close is-large" aria-label="Close"></button>
+    <button class="modal-close is-large" aria-label="Close"><span class="visually-hidden">Close button</span></button>
   </div>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>

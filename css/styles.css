@@ -297,3 +297,9 @@ div.modal-button:focus-visible,
   color: white;
   text-decoration: none;
 }
+
+.list-separator {
+  border-top: 1px solid grey;
+  margin-right: -20px;
+  margin-left: -20px;
+}

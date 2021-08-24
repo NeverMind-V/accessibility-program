@@ -27,9 +27,9 @@
             </span>
           </div>
 
-          <div id="navbarMenu" class="navbar-menu">
-            <nav class="navbar-end">
-              <div class="navbar-item">
+          <nav id="navbarMenu" class="navbar-menu" aria-label="Navbar menu">
+            <div class="navbar-end" role="menubar">
+              <div class="navbar-item" role="menuitem">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fa fa-home" aria-hidden="true"></i>
@@ -37,13 +37,13 @@
                   <span>Home</span>
                 </a>
               </div>
-              <div class="navbar-item navbar-submenu-item">
+              <div class="navbar-item navbar-submenu-item" role="menuitem">
                 <button class="button is-ghost navbar-submenu-button" aria-expanded="false" aria-haspopup="true">
                   <i class="fab fa-superpowers mr-1" aria-hidden="true"></i>
                   <span>Examples</span>
                   <i class="fas fa-angle-down ml-3" aria-hidden="true"></i>
                 </button>
-                <div class="box navbar-submenu">
+                <div class="box navbar-submenu" aria-label="Submenu">
                   <ul id="navbar-submenu-list" role="menu">
                     <li class="navbar-submenu-list-item" role="none"><a href="#" role="menuitem" tabindex="-1">Administration</a></li>
                     <li class="navbar-submenu-list-item" role="none"><a href="#" role="menuitem" tabindex="-1">Team Settings</a></li>
@@ -54,7 +54,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="navbar-item">
+              <div class="navbar-item" role="menuitem">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fa fa-book" aria-hidden="true"></i>
@@ -62,7 +62,7 @@
                   <span>Documentation</span>
                 </a>
               </div>
-              <div class="navbar-item">
+              <div class="navbar-item" role="menuitem">
                 <a href="#" class="navbar-custom-link">
                   <span class="icon">
                     <i class="fab fa-github" aria-hidden="true"></i>
@@ -70,8 +70,8 @@
                   <span>View Source</span>
                 </a>
               </div>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
       </nav>
     </div>

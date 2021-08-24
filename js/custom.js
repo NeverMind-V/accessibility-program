@@ -24,20 +24,33 @@ document.querySelectorAll('#nav button').forEach(function (navEl) {
   const els = document.querySelectorAll('.navbar-submenu-list-item a');
   let index = 0;
 
-  navMenu.addEventListener('keydown', function (event) {
-    if (event.keyCode === 13 || event.keyCode === 32) {
-      index = 0;
-      navMenu.setAttribute('aria-expanded', true);
-      navMenu.nextElementSibling.classList.add('is-active');
-      els[index].setAttribute('tabindex', 0);
-      els[index].focus();
-    }
+  navMenu.addEventListener('click', function () {
+    index = 0;
+    navMenu.setAttribute('aria-expanded', true);
+    navMenu.nextElementSibling.classList.add('is-active');
+    els[index].setAttribute('tabindex', 0);
+    els[index].focus();
   });
 
   els.forEach(function (el) {
     el.addEventListener('keydown', function (event) {
-      switch (event.keyCode) {
-        case 9:
+      switch (true) {
+        case event.keyCode === 9 && event.shiftKey:
+          event.preventDefault();
+          index--;
+          el.setAttribute('tabindex', -1);
+          if (els[0] === el) {
+            navMenu.nextElementSibling.classList.remove('is-active');
+            navMenu.parentElement.previousElementSibling.children[0].focus();
+            navMenu.setAttribute('aria-expanded', false);
+
+            return;
+          }
+
+          els[index].setAttribute('tabindex', 0);
+          els[index].focus();
+          break;
+        case event.keyCode === 9:
           event.preventDefault();
           index++;
           el.setAttribute('tabindex', -1);
@@ -52,7 +65,7 @@ document.querySelectorAll('#nav button').forEach(function (navEl) {
           els[index].setAttribute('tabindex', 0);
           els[index].focus();
           break;
-        case 27:
+        case event.keyCode === 27:
           navMenu.focus();
       }
     });

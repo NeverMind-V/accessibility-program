@@ -220,6 +220,7 @@ textarea:focus {
 input[type='checkbox']:focus,
 input[type='radio']:focus,
 div.modal-button:focus-visible,
+.tab-pane:focus-visible,
 .link-image:focus-visible img {
   outline: 2px solid rgb(70, 177, 96) !important;
 }
@@ -269,4 +270,36 @@ div.modal-button:focus-visible,
 .navbar-custom-link:hover {
   color: white;
   border-bottom: 2px solid white;
+}
+
+.navbar-submenu-item {
+  position: relative;
+}
+
+.navbar-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+}
+
+.navbar-submenu-item:hover .navbar-submenu,
+.navbar-submenu-item .navbar-submenu.is-active {
+  display: block;
+}
+
+.button.navbar-submenu-button {
+  color: white;
+}
+
+.button.navbar-submenu-button:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.list-separator {
+  border-top: 1px solid grey;
+  margin-right: -20px;
+  margin-left: -20px;
 }
